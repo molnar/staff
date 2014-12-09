@@ -76,9 +76,8 @@
 	    	$scope.letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 	    	$scope.currentLetter="A";
 	    	$scope.lowercaseCurrentLetter = "a"
-	    	var domain  =  document.domain;
-	    	if (domain == "localhost")domain = "webdev.coast.noaa.gov";
-	    	$http.jsonp('http://'+document.domain+'/dataservices/InternetSupport/getStaffDirectory?f=jsonp&callback=JSON_CALLBACK').then(function(result){		  
+	    	
+	    	$http.jsonp('http://coast.noaa.gov/dataservices/InternetSupport/getStaffDirectory?f=jsonp&callback=JSON_CALLBACK').then(function(result){		  
             	   $scope.staff = result.data.StaffList.Employee;
             	   
 
